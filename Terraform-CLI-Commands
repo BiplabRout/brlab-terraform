@@ -1,0 +1,35 @@
+1. terraform init :
+
+   download the provider packages to our local folder ".terraform" from terraform as mentioned in the "terraform setting" block
+
+
+2. terraform plan :
+
+   2.1 : set the planning of the infra, where first it will do refresh of current state(state of resource in the actual cloud platform)
+        and the terraform state file .
+        It means it will also do a "terraform refresh" internally for every resource., but "tfstate" file will not be updated actually.
+        so will not see any changes to tfstate file unless we don't di terraform apply.
+
+   2.2 : terraform plan -refresh=false : will not do refresh for any for the resources
+   2.3 : terraform plan will refresh it but will not update the "tfstate" file . these file will only be updated by terraform apply
+
+
+3. terraform refresh :
+
+    It will update the changes in the tfsate file which are detected between current state and tfstate file.
+
+
+4. terraform apply :
+
+    4.1 : apply the resources to platform.
+          It will also do the same activity as "terraform plan" does before deploying the resources
+
+    4.2 : "terraform apply -auto-approve"  : it will not prompt for final approval
+
+
+5. terraform destroy :
+
+    4.1 : destroy the resources from platform.
+          It will also do the same activity as "terraform plan" does before destroying the resources
+
+    4.2 : "terraform destroy -auto-approve"  : it will not prompt for final approval
