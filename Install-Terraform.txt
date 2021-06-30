@@ -1,0 +1,9 @@
+1. Terraform is a binary file.
+2. To install terraform , only we have to download the terraform binary from Terraform website.
+   And follow below steps for individual Operating system.
+
+   2.1 :  For Linux :  copy that binary to the /usr/bin folder
+   2.2 : For Windows : set the location of the binary in the Environment PATH variable.
+
+3. Run :   open command/terminal : type  "terraform"  and then hit enter .
+    It will show all the CLI commands of the Terraform and hence we can validate the Terraform is installed. 
