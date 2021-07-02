@@ -12,7 +12,9 @@
 
    2.2 : terraform plan -refresh=false : will not do refresh for any for the resources
    2.3 : terraform plan will refresh it but will not update the "tfstate" file . these file will only be updated by terraform apply
-
+   2.4 : terraform plan -var <variable-name> = <variable-value>
+         terraform plan -var-file <variable-filename>.tfvars
+         terraform plan -refresh=false
 
 3. terraform refresh :
 
